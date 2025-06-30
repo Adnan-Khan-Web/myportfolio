@@ -1,0 +1,189 @@
+ 
+   /* Make the layout full height and use flexbox */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* this makes main content take up available space */
+}
+
+   
+   :root {
+      --primary: #1e3a8a;
+      --secondary: #06b6d4;
+      --background: #f3f4f6;
+      --card-bg: #ffffff;
+      --text-dark: #1f2937;
+      --text-light: #f8fafc;
+      --dark-bg: #0f172a;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background);
+      color: var(--text-dark);
+    }
+
+    body.dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+    }
+
+    body.dark-mode .bg-light {
+      background-color: #1c1c1c !important;
+    }
+
+    section {
+      background-color: var(--background);
+      padding: 5rem 1rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+
+
+    header {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=1400&q=80') center/cover fixed;
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height:  100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    header>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    #typing-text {
+      font-size: 1.25rem;
+      font-weight: 500;
+      height: 1.5em;
+      color: #f8f9fa;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 2.25rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .btn-download,
+    .btn-outline-primary {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn-download:hover,
+    .btn-outline-primary:hover {
+      background-color: var(--secondary);
+    }
+
+    .badge {
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: transform 0.3s ease;
+    }
+
+    .badge:hover {
+      transform: scale(1.05);
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      z-index: 1100;
+      background: var(--primary);
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #contact a {
+      color: #0c0a0a;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    #contact a:hover {
+      color: var(--secondary);
+    }
+
+
+
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: var(--primary);
+    }
+
+    body.dark-mode .navbar-light .navbar-nav .nav-link {
+      color: var(--text-light);
+    }
+  
